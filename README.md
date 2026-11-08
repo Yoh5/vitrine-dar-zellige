@@ -25,12 +25,12 @@ Hébergement : n'importe quel hébergeur statique (Netlify, OVH, mutualisé).
 1. `content.js` → `config.whatsapp` : numéro avec indicatif, sans « + » (ex. `2126…`).
    Vide en démonstration : le bouton ouvre WhatsApp sans destinataire.
 2. `config.phone`, `config.email`, les horaires (`hours`) et la carte (`menu`).
-3. **Les photos** — à déposer dans `assets/photos/` (WebP, ~1 600 px de large), puis
-   renseigner leur chemin dans `config.photos`. Tant qu'une case est vide, elle
-   affiche le motif de zellige dans un ton choisi. Les prises de vue à demander :
-   - `hero` : la salle ou le patio, plan large, lumière chaude ;
-   - `histoire` : un détail d'architecture (arc, zellige, plafond de cèdre), en portrait ;
-   - `galerie` (6) : patio, tajine fumant, service du thé, terrasse, salon privé, pastilla.
+3. **Les photos** — la démonstration utilise 8 photos de **Wikimedia Commons**
+   (licences CC BY et CC BY-SA, auteurs crédités dans le pied de page ; détail dans
+   `assets/photos/credits.json`). Aucune ne montre un établissement réel nommé.
+   Pour un vrai client : remplacer les fichiers de `assets/photos/` par ses photos
+   (WebP, ~1 600 px), puis **vider `credits`** dans `content.js`. Une case sans photo
+   affiche le motif de zellige dans le ton choisi.
 4. Retirer la phrase « établissement fictif » de `footer.demo` et `infos.addressText`.
 
 ## Choix de conception
@@ -48,6 +48,15 @@ Hébergement : n'importe quel hébergeur statique (Netlify, OVH, mutualisé).
 - Accessibilité : lien d'évitement, focus visible, onglets de la carte au clavier
   (flèches inversées en arabe), erreurs de formulaire à côté du champ et annoncées,
   cibles de 44 px minimum, animations coupées si `prefers-reduced-motion`.
+
+## Passe de finition (skill impeccable, 08/11/2026)
+
+- Retiré les sur-titres au-dessus des titres de section : le titre porte seul.
+- Une seule animation d'entrée, échelonnée, sur la galerie — plus la même sur chaque section.
+- Anneau de focus vert zellige sur fond clair, safran sur fond sombre (≥ 3:1 partout).
+- Sélection de texte, curseur, contrôles de formulaire et chiffres (prix, horaires)
+  dans la palette ; photo d'ouverture préchargée.
+- Mobile : voile sombre uniforme sur la photo d'ouverture, le texte reste lisible.
 
 ## Vérifié le 08/11/2026
 

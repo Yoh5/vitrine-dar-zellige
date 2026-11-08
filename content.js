@@ -19,17 +19,17 @@ window.SITE = {
     // Photos du client : chemin relatif, ex. "assets/photos/salle.webp".
     // Une case vide affiche le motif de zellige à la place.
     photos: {
-      hero: "",
-      histoire: "",
+      hero: "assets/photos/hero.webp",
+      histoire: "assets/photos/histoire.webp",
       // Chaque case : une photo (src), une légende, et le ton du motif affiché
       // tant que la photo manque (zellige, terracotta, safran, sable).
       galerie: [
-        { src: "", tone: "zellige", caption: { fr: "Le patio", en: "The courtyard", ar: "الصحن" } },
-        { src: "", tone: "terracotta", caption: { fr: "Le tajine, à la sortie du feu", en: "Tagine, straight off the fire", ar: "الطاجين حين يُرفع عن النار" } },
-        { src: "", tone: "saffron", caption: { fr: "Le thé de l'après-midi", en: "Afternoon tea", ar: "أتاي العصر" } },
-        { src: "", tone: "sand", caption: { fr: "La terrasse sur les toits", en: "The rooftop terrace", ar: "السطح" } },
-        { src: "", tone: "terracotta", caption: { fr: "Le salon privé", en: "The private salon", ar: "الصالون الخاص" } },
-        { src: "", tone: "zellige", caption: { fr: "La pastilla de Fès", en: "Fez pastilla", ar: "بسطيلة فاس" } }
+        { src: "assets/photos/patio.webp", tone: "zellige", caption: { fr: "Le patio", en: "The courtyard", ar: "الصحن" } },
+        { src: "assets/photos/tajine.webp", tone: "terracotta", caption: { fr: "Le tajine, à la sortie du feu", en: "Tagine, straight off the fire", ar: "الطاجين حين يُرفع عن النار" } },
+        { src: "assets/photos/the.webp", tone: "saffron", caption: { fr: "Le thé de l'après-midi", en: "Afternoon tea", ar: "أتاي العصر" } },
+        { src: "assets/photos/terrasse.webp", tone: "sand", caption: { fr: "La terrasse sur les toits", en: "The rooftop terrace", ar: "السطح" } },
+        { src: "assets/photos/epices.webp", tone: "terracotta", caption: { fr: "Les épices du marché", en: "Spices from the market", ar: "توابل السوق" } },
+        { src: "assets/photos/pastilla.webp", tone: "zellige", caption: { fr: "La pastilla de Fès", en: "Fez pastilla", ar: "بسطيلة فاس" } }
       ]
     },
     currency: { fr: "DH", en: "MAD", ar: "درهم" }
@@ -112,6 +112,20 @@ window.SITE = {
   // tant que la liste est vide.
   reviews: [],
 
+  // Photos de démonstration : Wikimedia Commons. Les licences CC BY et CC BY-SA
+  // exigent de créditer l'auteur — fait dans le pied de page. Pour un vrai
+  // client, remplacer par ses propres photos et vider cette liste.
+  credits: [
+    {"author": "Dahbi fatima zahrae", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "source": "https://commons.wikimedia.org/wiki/File:Traditional_Moroccan_Riad_Courtyard_with_Pool_in_Fez,_Morocco.jpg"},
+    {"author": "Dahbi fatima zahrae", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "source": "https://commons.wikimedia.org/wiki/File:Traditional_Moroccan_Riad_Courtyard_with_Ornate_Architecture_in_Fez.jpg"},
+    {"author": "Arnaud 25", "license": "CC BY-SA 3.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0", "source": "https://commons.wikimedia.org/wiki/File:Riad_Maroc_034.JPG"},
+    {"author": "Michal Osmenda from Brussels, Belgium", "license": "CC BY-SA 2.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0", "source": "https://commons.wikimedia.org/wiki/File:Moroccan_food_and_drink_-_tajine_(5368126576).jpg"},
+    {"author": "Adam Harangozó", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "source": "https://commons.wikimedia.org/wiki/File:Mint_tea,_Marrakesh.jpg"},
+    {"author": "Arnaud 25", "license": "CC BY-SA 3.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0", "source": "https://commons.wikimedia.org/wiki/File:Riad_Maroc_022.JPG"},
+    {"author": "Weetjesman", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "source": "https://commons.wikimedia.org/wiki/File:Moroccan_Pastilla.jpg"},
+    {"author": "Donar Reiskoffer", "license": "CC BY 3.0", "licenseUrl": "https://creativecommons.org/licenses/by/3.0", "source": "https://commons.wikimedia.org/wiki/File:Morocco,_Spices.JPG"}
+  ],
+
   i18n: {
     fr: {
       "meta.title": "Dar Zellige — Cuisine marocaine dans la médina",
@@ -123,12 +137,10 @@ window.SITE = {
       "nav.infos": "Infos pratiques",
       "nav.reserver": "Réserver",
       "nav.menuToggle": "Ouvrir le menu",
-      "hero.kicker": "Cuisine marocaine · Médina",
       "hero.title": "La table d'une maison de la médina",
       "hero.lead": "Des recettes de famille, le marché du matin et le thé versé de haut. Sous un plafond de cèdre, autour d'un patio de zellige.",
       "hero.ctaReserve": "Réserver par WhatsApp",
       "hero.ctaMenu": "Voir la carte",
-      "histoire.kicker": "La maison",
       "histoire.title": "Une cuisine qui prend son temps",
       "histoire.p1": "Dar Zellige est une ancienne demeure de la médina, rendue à sa fonction première : recevoir. On y cuisine comme on le fait chez soi, avec les produits du jour et les épices moulues sur place.",
       "histoire.p2": "Les tajines mijotent des heures, la semoule est roulée à la main, et la pastilla suit la recette de Fès. Rien n'est pressé, et c'est voulu.",
@@ -138,16 +150,12 @@ window.SITE = {
       "histoire.f2d": "La carte suit l'arrivage : certains plats changent selon la saison.",
       "histoire.f3t": "Pour tous",
       "histoire.f3d": "Plats végétariens signalés sur la carte, menus pour les groupes.",
-      "carte.kicker": "La carte",
       "carte.title": "Ce que la cuisine prépare",
       "carte.note": "Prix en dirhams, service compris. Demandez-nous les allergènes : nous connaissons chaque plat.",
       "carte.veg": "Végétarien",
-      "experience.kicker": "L'expérience",
       "experience.title": "Le patio, la terrasse, le thé",
       "experience.lead": "Le patio pour les dîners, la terrasse sur les toits pour le thé de fin d'après-midi, un salon privé pour les groupes jusqu'à vingt personnes.",
-      "avis.kicker": "Ils sont venus",
       "avis.title": "Ce qu'en disent nos hôtes",
-      "infos.kicker": "Infos pratiques",
       "infos.title": "Nous trouver",
       "infos.hours": "Horaires",
       "infos.address": "Adresse",
@@ -155,7 +163,6 @@ window.SITE = {
       "infos.contact": "Contact",
       "infos.access": "Accès",
       "infos.accessText": "À dix minutes à pied de la porte principale. Un membre de l'équipe peut venir vous chercher : écrivez-nous.",
-      "reserver.kicker": "Réserver",
       "reserver.title": "Réservez une table",
       "reserver.lead": "Remplissez ces quelques lignes : votre demande s'ouvre dans WhatsApp, prête à envoyer. Nous confirmons dans l'heure pendant les horaires d'ouverture.",
       "form.name": "Votre nom",
@@ -175,6 +182,7 @@ window.SITE = {
       "wa.floatLabel": "Écrire à Dar Zellige sur WhatsApp",
       "footer.demo": "Site de démonstration réalisé pour un portfolio. Dar Zellige est un établissement fictif : adresse, téléphone et carte sont des exemples.",
       "footer.rights": "Tous droits réservés.",
+      "footer.credits": "Photos de démonstration (Wikimedia Commons) :",
       "lang.label": "Langue"
     },
     en: {
@@ -187,12 +195,10 @@ window.SITE = {
       "nav.infos": "Visit",
       "nav.reserver": "Book",
       "nav.menuToggle": "Open menu",
-      "hero.kicker": "Moroccan cuisine · Medina",
       "hero.title": "The table of a medina house",
       "hero.lead": "Family recipes, the morning market and tea poured from high. Under a cedar ceiling, around a zellige courtyard.",
       "hero.ctaReserve": "Book on WhatsApp",
       "hero.ctaMenu": "See the menu",
-      "histoire.kicker": "The house",
       "histoire.title": "A kitchen that takes its time",
       "histoire.p1": "Dar Zellige is an old medina home returned to its first purpose: hosting. We cook the way people do at home, with the day's produce and spices ground on site.",
       "histoire.p2": "Tagines simmer for hours, couscous is rolled by hand, and the pastilla follows the Fez recipe. Nothing is rushed, on purpose.",
@@ -202,16 +208,12 @@ window.SITE = {
       "histoire.f2d": "The menu follows what arrives: some dishes change with the season.",
       "histoire.f3t": "For everyone",
       "histoire.f3d": "Vegetarian dishes marked on the menu, set menus for groups.",
-      "carte.kicker": "The menu",
       "carte.title": "What the kitchen prepares",
       "carte.note": "Prices in Moroccan dirhams, service included. Ask us about allergens: we know every dish.",
       "carte.veg": "Vegetarian",
-      "experience.kicker": "The experience",
       "experience.title": "The courtyard, the terrace, the tea",
       "experience.lead": "The courtyard for dinner, the rooftop terrace for late-afternoon tea, a private salon for groups of up to twenty.",
-      "avis.kicker": "Our guests",
       "avis.title": "What our guests say",
-      "infos.kicker": "Visit",
       "infos.title": "Find us",
       "infos.hours": "Opening hours",
       "infos.address": "Address",
@@ -219,7 +221,6 @@ window.SITE = {
       "infos.contact": "Contact",
       "infos.access": "Getting here",
       "infos.accessText": "Ten minutes on foot from the main gate. Someone from the team can come and meet you: just message us.",
-      "reserver.kicker": "Book",
       "reserver.title": "Book a table",
       "reserver.lead": "Fill in these few lines: your request opens in WhatsApp, ready to send. We confirm within the hour during opening times.",
       "form.name": "Your name",
@@ -239,6 +240,7 @@ window.SITE = {
       "wa.floatLabel": "Message Dar Zellige on WhatsApp",
       "footer.demo": "Demonstration site built for a portfolio. Dar Zellige is a fictional venue: address, phone number and menu are examples.",
       "footer.rights": "All rights reserved.",
+      "footer.credits": "Demonstration photos (Wikimedia Commons):",
       "lang.label": "Language"
     },
     ar: {
@@ -251,12 +253,10 @@ window.SITE = {
       "nav.infos": "معلومات عملية",
       "nav.reserver": "احجز",
       "nav.menuToggle": "فتح القائمة",
-      "hero.kicker": "مطبخ مغربي · المدينة العتيقة",
       "hero.title": "مائدة دار من دور المدينة العتيقة",
       "hero.lead": "وصفات عائلية، سوق الصباح، وأتاي يُصبّ من الأعلى. تحت سقف من خشب الأرز، حول صحن مزيّن بالزليج.",
       "hero.ctaReserve": "احجز عبر واتساب",
       "hero.ctaMenu": "اطّلع على القائمة",
-      "histoire.kicker": "الدار",
       "histoire.title": "مطبخ لا يستعجل",
       "histoire.p1": "دار الزليج بيت قديم في المدينة العتيقة عاد إلى وظيفته الأولى: الضيافة. نطبخ كما يُطبخ في البيت، بمنتجات اليوم وتوابل تُطحن في عين المكان.",
       "histoire.p2": "تُطهى الطواجن لساعات، ويُفتل الكسكس باليد، وتتبع البسطيلة وصفة فاس. لا شيء على عجل، وهذا مقصود.",
@@ -266,16 +266,12 @@ window.SITE = {
       "histoire.f2d": "القائمة تتبع ما يصل من السوق: بعض الأطباق تتغير حسب الفصل.",
       "histoire.f3t": "للجميع",
       "histoire.f3d": "أطباق نباتية مُشار إليها في القائمة، وقوائم خاصة بالمجموعات.",
-      "carte.kicker": "قائمة الطعام",
       "carte.title": "ما يحضّره المطبخ",
       "carte.note": "الأسعار بالدرهم، الخدمة مشمولة. اسألونا عن مسببات الحساسية: نعرف كل طبق.",
       "carte.veg": "نباتي",
-      "experience.kicker": "الأجواء",
       "experience.title": "الصحن، السطح، والأتاي",
       "experience.lead": "الصحن لوجبات العشاء، السطح لأتاي آخر العصر، وصالون خاص للمجموعات حتى عشرين شخصاً.",
-      "avis.kicker": "ضيوفنا",
       "avis.title": "ماذا يقول ضيوفنا",
-      "infos.kicker": "معلومات عملية",
       "infos.title": "كيف تصل إلينا",
       "infos.hours": "أوقات العمل",
       "infos.address": "العنوان",
@@ -283,7 +279,6 @@ window.SITE = {
       "infos.contact": "التواصل",
       "infos.access": "الوصول",
       "infos.accessText": "على بعد عشر دقائق مشياً من الباب الرئيسي. يمكن لأحد أفراد الفريق أن يرافقك: راسلنا فقط.",
-      "reserver.kicker": "الحجز",
       "reserver.title": "احجز طاولة",
       "reserver.lead": "املأ هذه الأسطر القليلة: يُفتح طلبك في واتساب جاهزاً للإرسال. نؤكد الحجز خلال ساعة في أوقات العمل.",
       "form.name": "اسمك",
@@ -303,6 +298,7 @@ window.SITE = {
       "wa.floatLabel": "راسل دار الزليج عبر واتساب",
       "footer.demo": "موقع تجريبي أُنجز لملف أعمال. دار الزليج مكان خيالي: العنوان والهاتف والقائمة مجرد أمثلة.",
       "footer.rights": "جميع الحقوق محفوظة.",
+      "footer.credits": "صور تجريبية (ويكيميديا كومنز):",
       "lang.label": "اللغة"
     }
   }

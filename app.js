@@ -186,6 +186,21 @@
     mail.textContent = SITE.config.email;
     mail.href = "mailto:" + SITE.config.email;
     document.querySelector(".js-year").textContent = new Date().getFullYear();
+
+    // Crédits des photos (licences CC BY / CC BY-SA : l'auteur doit être cité).
+    const box = document.querySelector(".js-credits");
+    const credits = SITE.credits || [];
+    box.closest(".credits").hidden = credits.length === 0;
+    credits.forEach((c, i) => {
+      if (i) box.append(" · ");
+      const a = document.createElement("a");
+      a.href = c.source; a.target = "_blank"; a.rel = "noopener";
+      a.textContent = c.author;
+      const lic = document.createElement("a");
+      lic.href = c.licenseUrl || c.source; lic.target = "_blank"; lic.rel = "noopener license";
+      lic.textContent = c.license;
+      box.append(a, " (", lic, ")");
+    });
   }
 
   /* ---------- Photos ---------- */
@@ -201,6 +216,7 @@
     (p.galerie || []).forEach((g) => {
       const cell = document.createElement("figure");
       cell.className = "photo reveal tone-" + (g.tone || "zellige");
+      cell.style.setProperty("--i", gallery.children.length);
       set(cell, g.src);
       const cap = document.createElement("figcaption");
       cap.dataset.caption = JSON.stringify(g.caption || {});
