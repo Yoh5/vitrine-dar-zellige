@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="meta.title">Dar Zellige — Cuisine marocaine dans la médina</title>
+  <meta name="description" data-i18n-attr="content:meta.desc" content="Restaurant marocain : tajines, couscous du vendredi, pastilla de Fès.">
+  <meta name="theme-color" content="#0B3F36">
+  <link rel="icon" href="assets/zellige.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700&family=Noto+Naskh+Arabic:wght@400;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Aller au contenu</a>
+
+  <header class="site-header" id="top">
+    <div class="wrap header-row">
+      <a class="brand" href="#top" aria-label="Dar Zellige">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-name">Dar Zellige</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav"
+              data-i18n-attr="aria-label:nav.menuToggle" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="nav" class="nav" aria-label="Navigation principale">
+        <ul>
+          <li><a href="#histoire" data-i18n="nav.histoire">La maison</a></li>
+          <li><a href="#carte" data-i18n="nav.carte">La carte</a></li>
+          <li><a href="#experience" data-i18n="nav.experience">L'expérience</a></li>
+          <li><a href="#infos" data-i18n="nav.infos">Infos pratiques</a></li>
+        </ul>
+        <div class="lang" role="group" data-i18n-attr="aria-label:lang.label" aria-label="Langue">
+          <button type="button" data-lang="fr" lang="fr">FR</button>
+          <button type="button" data-lang="en" lang="en">EN</button>
+          <button type="button" data-lang="ar" lang="ar">عربي</button>
+        </div>
+        <a class="btn btn-primary btn-small" href="#reserver" data-i18n="nav.reserver">Réserver</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Ouverture -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-media photo" data-photo="hero" aria-hidden="true"></div>
+      <div class="wrap hero-content">
+        <p class="kicker" data-i18n="hero.kicker">Cuisine marocaine · Médina</p>
+        <h1 id="hero-title" data-i18n="hero.title">La table d'une maison de la médina</h1>
+        <p class="lead" data-i18n="hero.lead"></p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#reserver" data-i18n="hero.ctaReserve">Réserver par WhatsApp</a>
+          <a class="btn btn-ghost" href="#carte" data-i18n="hero.ctaMenu">Voir la carte</a>
+        </div>
+      </div>
+      <div class="arch-edge" aria-hidden="true"></div>
+    </section>
+
+    <!-- La maison -->
+    <section id="histoire" class="section" aria-labelledby="histoire-title">
+      <div class="wrap split">
+        <div class="split-media">
+          <div class="arch photo reveal" data-photo="histoire" aria-hidden="true"></div>
+        </div>
+        <div class="split-text reveal">
+          <p class="kicker" data-i18n="histoire.kicker">La maison</p>
+          <h2 id="histoire-title" data-i18n="histoire.title"></h2>
+          <p data-i18n="histoire.p1"></p>
+          <p data-i18n="histoire.p2"></p>
+          <ul class="features">
+            <li>
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 11h16M6 11V8a6 6 0 0 1 12 0v3M5 11l1.5 9h11L19 11"/></svg>
+              <div><h3 data-i18n="histoire.f1t"></h3><p data-i18n="histoire.f1d"></p></div>
+            </li>
+            <li>
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 21c-4-3-7-6.5-7-10a7 7 0 0 1 14 0c0 3.5-3 7-7 10Z"/><path d="M12 7v7M9 11l3 3 3-3"/></svg>
+              <div><h3 data-i18n="histoire.f2t"></h3><p data-i18n="histoire.f2d"></p></div>
+            </li>
+            <li>
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 19c6 0 12-5 13-14-9 1-14 7-14 13M5 19c2-4 5-7 9-9"/></svg>
+              <div><h3 data-i18n="histoire.f3t"></h3><p data-i18n="histoire.f3d"></p></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- La carte -->
+    <section id="carte" class="section section-sand" aria-labelledby="carte-title">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="kicker" data-i18n="carte.kicker">La carte</p>
+          <h2 id="carte-title" data-i18n="carte.title"></h2>
+        </header>
+        <div class="menu-tabs" role="tablist" aria-labelledby="carte-title"></div>
+        <div class="menu-panels"></div>
+        <p class="menu-note" data-i18n="carte.note"></p>
+      </div>
+    </section>
+
+    <!-- L'expérience -->
+    <section id="experience" class="section section-dark" aria-labelledby="experience-title">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="kicker" data-i18n="experience.kicker">L'expérience</p>
+          <h2 id="experience-title" data-i18n="experience.title"></h2>
+          <p class="lead" data-i18n="experience.lead"></p>
+        </header>
+        <div class="gallery"></div>
+      </div>
+    </section>
+
+    <!-- Avis : masqués tant que content.js n'en contient pas -->
+    <section id="avis" class="section" aria-labelledby="avis-title" hidden>
+      <div class="wrap">
+        <header class="section-head">
+          <p class="kicker" data-i18n="avis.kicker"></p>
+          <h2 id="avis-title" data-i18n="avis.title"></h2>
+        </header>
+        <div class="reviews"></div>
+      </div>
+    </section>
+
+    <!-- Infos pratiques -->
+    <section id="infos" class="section" aria-labelledby="infos-title">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="kicker" data-i18n="infos.kicker">Infos pratiques</p>
+          <h2 id="infos-title" data-i18n="infos.title"></h2>
+        </header>
+        <div class="info-grid">
+          <div class="info-card reveal">
+            <h3 data-i18n="infos.hours"></h3>
+            <dl class="hours"></dl>
+          </div>
+          <div class="info-card reveal">
+            <h3 data-i18n="infos.address"></h3>
+            <p data-i18n="infos.addressText"></p>
+            <h3 data-i18n="infos.access"></h3>
+            <p data-i18n="infos.accessText"></p>
+          </div>
+          <div class="info-card reveal">
+            <h3 data-i18n="infos.contact"></h3>
+            <ul class="contact-list">
+              <li><a class="js-phone" href="#" dir="ltr"></a></li>
+              <li><a class="js-email" href="#" dir="ltr"></a></li>
+              <li><a class="js-wa" href="#" target="_blank" rel="noopener" data-i18n="wa.float">WhatsApp</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Réservation -->
+    <section id="reserver" class="section section-terracotta" aria-labelledby="reserver-title">
+      <div class="wrap reserve">
+        <div class="reserve-text reveal">
+          <p class="kicker" data-i18n="reserver.kicker">Réserver</p>
+          <h2 id="reserver-title" data-i18n="reserver.title"></h2>
+          <p data-i18n="reserver.lead"></p>
+        </div>
+        <form class="reserve-form reveal" novalidate>
+          <div class="field">
+            <label for="f-name" data-i18n="form.name">Votre nom</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="e-name">
+            <p class="error" id="e-name" aria-live="polite"></p>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="f-date" data-i18n="form.date">Date</label>
+              <input id="f-date" name="date" type="date" required aria-describedby="e-date">
+              <p class="error" id="e-date" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="f-time" data-i18n="form.time">Heure</label>
+              <input id="f-time" name="time" type="time" required aria-describedby="e-time">
+              <p class="error" id="e-time" aria-live="polite"></p>
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-guests" data-i18n="form.guests">Nombre de personnes</label>
+            <input id="f-guests" name="guests" type="number" inputmode="numeric" min="1" max="20" value="2" required aria-describedby="e-guests">
+            <p class="error" id="e-guests" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="f-note"><span data-i18n="form.note"></span> <span class="optional">(<span data-i18n="form.optional"></span>)</span></label>
+            <textarea id="f-note" name="note" rows="3"></textarea>
+          </div>
+          <button class="btn btn-light" type="submit">
+            <svg class="wa-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.7 13.6L3 21l4.5-1.2A9 9 0 1 0 12 3Z"/><path d="M8.5 8.5c.3 2.9 2.6 5.6 5.8 6.6l1.2-1.4-1.7-1-1 .8a5 5 0 0 1-2.4-2.4l.8-1-1-1.7Z"/></svg>
+            <span data-i18n="form.submit">Envoyer la demande sur WhatsApp</span>
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <p class="brand-name">Dar Zellige</p>
+      <p class="demo-note" data-i18n="footer.demo"></p>
+      <p class="rights">© <span class="js-year"></span> Dar Zellige. <span data-i18n="footer.rights"></span></p>
+    </div>
+  </footer>
+
+  <a class="wa-float js-wa" href="#" target="_blank" rel="noopener" data-i18n-attr="aria-label:wa.floatLabel" aria-label="WhatsApp">
+    <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.7 13.6L3 21l4.5-1.2A9 9 0 1 0 12 3Z"/><path d="M8.5 8.5c.3 2.9 2.6 5.6 5.8 6.6l1.2-1.4-1.7-1-1 .8a5 5 0 0 1-2.4-2.4l.8-1-1-1.7Z"/></svg>
+    <span data-i18n="wa.float">WhatsApp</span>
+  </a>
+
+  <script src="content.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

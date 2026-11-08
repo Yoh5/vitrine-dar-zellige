@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
+  <!-- Motif d'étoile à huit branches (khatam), répété en tuile. Deux carrés
+       superposés à 45°, puis un losange de liaison entre les tuiles. -->
+  <g fill="none" stroke="currentColor" stroke-width="1.2">
+    <rect x="22" y="22" width="36" height="36"/>
+    <rect x="22" y="22" width="36" height="36" transform="rotate(45 40 40)"/>
+    <circle cx="40" cy="40" r="7"/>
+    <path d="M0 40 L8 32 L16 40 L8 48 Z M80 40 L72 32 L64 40 L72 48 Z M40 0 L32 8 L40 16 L48 8 Z M40 80 L32 72 L40 64 L48 72 Z"/>
+  </g>
+</svg>
